@@ -1,0 +1,100 @@
+<!-- by christ-offert -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="dist/output.css">
+  <link rel="shortcut icon" href="ico/icn.png" type="image/x-icon">
+  <title>clock min</title>
+</head>
+
+<body class="bg-black text-white select-none">
+
+  <li class="hidden h-3 bg-white"></li>
+  <li class="hidden bg-yellow-500"></li>
+  <li class="hidden bg-pink-500"></li>
+
+  <section id="loading"
+    class="w-screen h-screen text-blue-400 fixed top-0 left-0 z-50 flex flex-col justify-center items-center bg-black/80 backdrop-blur-xl">
+
+    <span
+      class="flex justify-center items-center animate-pulse text-yellow-400 uppercase font-bold text-sm">clock</span>
+    <i class="fa fa-spinner text-xl animate-spin"></i>
+    <span class="flex justify-center items-center animate-pulse uppercase font-bold text-sm">please wait...</span>
+
+  </section>
+
+  <section id="corp" class="w-full h-[90vh] relative flex items-center justify-center">
+
+    <div
+      class="z-10 w-80 h-80 bg-neutral-900/90 blur-md box-content rounded-full flex justify-center items-center absolute">
+    </div>
+
+    <div id=""
+      class="z-10 w-72 min-w-[288px] max-w-[288px] h-72 min-h-[288px] max-h-[288px] bg-neutral-950 border-[8px] border-neutral-700 box-content rounded-full flex justify-center items-center relative">
+
+      <ul id="numbers"
+        class="w-[90%] h-[90%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 origin-center">
+
+        <li id="" class="num w-6 h-6 font-semibold -translate-x-1/2 absolute" style="--top: 0; --left: 50%;"> <span
+            class="flex justify-center items-center w-full h-full text-2xl">12</span> </li>
+
+        <li id="" class="num w-6 h-6 font-semibold -translate-y-1/2 absolute" style="--top: 50%; --right: 0;"> <span
+            class="flex justify-center items-center w-full h-full text-2xl">3</span> </li>
+
+        <li id="" class="num w-6 h-6 font-semibold -translate-x-1/2 absolute" style="--left: 50%; --bottom: 0;"> <span
+            class="flex justify-center items-center w-full h-full text-2xl">6</span> </li>
+
+        <li id="" class="num w-6 h-6 font-semibold -translate-y-1/2 absolute" style="--top: 50%; --left: 0;"> <span
+            class="flex justify-center items-center w-full h-full text-2xl">9</span> </li>
+
+      </ul>
+
+      <ul id="" class="w-[90%] h-[90%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 origin-center">
+        <li id="moyenne-aiguille"
+          class="w-[8px] h-[33%] bg-white absolute bottom-1/2 left-1/2 -translate-x-1/2 origin-bottom rounded rotate-[0deg]">
+        </li>
+        <li id="moyenne-aiguille"
+          class="z-10 w-[20px] h-[20px] bg-white absolute bottom-1/2 left-1/2 -translate-x-1/2 translate-y-1/2 origin-center rounded-full rotate-[0deg]">
+        </li>
+        <li id="petite-aiguille"
+          class="w-[12px] h-[23%] bg-white absolute bottom-1/2 left-1/2 -translate-x-1/2 origin-bottom rounded-lg rotate-[0deg]">
+        </li>
+        <li id="grande-aiguille"
+          class="w-[4px] h-[42%] bg-blue-500 absolute bottom-1/2 left-1/2 -translate-x-1/2 origin-bottom rounded rotate-[0deg]">
+        </li>
+      </ul>
+
+    </div>
+
+
+  </section>
+
+  <footer id="" class="h-[10vh]">
+    <div class="container h-full mx-auto text-sm flex justify-between items-center">
+      <h2 class="">2023.</h2>
+      <h2 class="">.by christ-offert</h2>
+    </div>
+  </footer>
+
+  <script src="src/lockFiles.js"></script>
+  <script src="src/index.js"></script>
+  <script>
+
+    window.onload = () => {
+
+      setTimeout(() => {
+        document.getElementById('loading').classList.add('hidden');
+      }, 2000);
+
+    }
+
+  </script>
+
+</body>
+
+</html>
